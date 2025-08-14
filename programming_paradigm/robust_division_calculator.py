@@ -1,14 +1,13 @@
 def safe_divide(numerator, denominator):
-    """Divides two numbers safely, handling errors."""
     try:
-        # Try to convert to float
-        numerator = float(numerator)
-        denominator = float(denominator)
+        # Convert both inputs to float
+        num = float(numerator)
+        den = float(denominator)
 
-        # Try the division
-        result = numerator / denominator
-        return f"The result of the division is {result}"
-    
+        # Perform the division
+        result = num / den
+        return f"The result of the division is {result:.2f}"
+
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     except ValueError:
